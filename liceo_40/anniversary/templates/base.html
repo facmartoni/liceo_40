@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {# Meta required tags #}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block title %}{% endblock %}
+
+    {# Fonts #}
+
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Lato:400,700&display=swap" rel="stylesheet">
+
+    {# Module Bootstrap4 #}
+    {% load bootstrap4 %}
+
+    {# CSS Bootstrap #}
+    {% bootstrap_css %}
+
+    {% load static %}
+
+    {# CSS Custom#}
+    <link rel="stylesheet" type="text/css" href="{% static 'anniversary/css/style.css' %}">
+
+</head>
+<body>
+
+    {# Header|Navbar #}
+    <header class="navbar navbar-expand-md navbar-dark bg-secondary-color py-1" role="navigation">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img class="logo-liceo" src="{% static 'anniversary/images/logo.png' %}" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item option">
+                    <a href="{% url 'home' %}" class="
+                        {% if request.resolver_match.view_name == 'home'%}
+                            nav-link grey-text-color
+                        {% else %}
+                            nav-link white-text-color
+                        {% endif %}
+                    "><u>Inicio</u></a>
+                </li>
+                <li class="nav-item option">
+                    <a href="{% url 'attendees' %}" class="
+                        {% if request.resolver_match.view_name == 'attendees'%}
+                            nav-link grey-text-color
+                        {% else %}
+                            nav-link white-text-color
+                        {% endif %}
+                    "><u>¿Quiénes van?</u></a>
+                </li>
+                <li class="nav-item option">
+                    <a href="{% url 'history' %}" class="
+                        {% if request.resolver_match.view_name == 'history'%}
+                            nav-link grey-text-color
+                        {% else %}
+                            nav-link white-text-color
+                        {% endif %}
+                    "><u>Historia del Liceo</u></a>
+                </li>
+                <li class="nav-item option">
+                    <a href="{% url 'photos' %}" class="
+                        {% if request.resolver_match.view_name == 'photos'%}
+                            nav-link grey-text-color
+                        {% else %}
+                            nav-link white-text-color
+                        {% endif %}
+                    "><u>Fotos del evento</u></a>
+                </li>
+                <li class="nav-item option">
+                    <a href="{% url 'register' %}" class="
+                        {% if request.resolver_match.view_name == 'register'%}
+                            nav-link grey-text-color
+                        {% else %}
+                            nav-link cta-text-color
+                        {% endif %}
+                    "><u>Inscripción</u></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    {# Content #}
+
+        {% block content %}
+        {% endblock content %}
+
+    {# Footer #}
+    <footer class="">
+        <div class="container-fluid">
+            <div class="row bg-secondary-color py-3 align-items-center justify-content-center flex-column flex-md-row text-center">
+                <div class="col-auto mr-md-auto">
+                    <p class="white-text-color my-0">Sitio Web creado por el subteniente de reserva y excadete García Martoni Facundo</p>
+                </div>
+                <div class="col-auto option">
+                    <a href="tel:+5493816378744" class="white-text-color"><u>3816378744</u></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    {# JS Bootstrap #}
+    {% bootstrap_javascript jquery='full' %}
+
+</body>
+</html>

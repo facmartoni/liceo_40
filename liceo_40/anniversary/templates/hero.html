@@ -1,0 +1,23 @@
+{% load static %}
+
+<style>
+    .hero_image{ 
+        width: 100%;
+        max-height: 400px; 
+        object-fit: cover; 
+        filter: grayscale(100%);
+    }
+</style>
+
+<div class="row">
+    <div class="col">
+        <img class="hero_image" src="{% static 'anniversary/images/plaza_armas.png' %}" alt="Imagen de portada">
+    </div>
+</div>
+<div class="row text-center justify-content-center py-3 bg-secondary-color">
+    <div class="col">
+        <h1 class="white-text-color">
+        ¡Vení a festejar el aniversario del Liceo!
+        </h1>
+    </div>
+</div>

@@ -1,0 +1,136 @@
+/* General */
+
+:root {
+  --black-color: #1d2226;
+  --white-color: #f2f2f2;
+  --primary-color: #6c7355;
+  --primary-dark-color: #535841;
+  --secondary-color: #3e402f;
+  --tertiary-color: #d9c3a9;
+  --cta-color: #f6b363;
+  --negative-color: #f20519;
+  --grey-color: #bcbcbc;
+  --black-text-color: #111111;
+  --white-text-color: #ffffff;
+}
+
+.bg-black-color {
+  background: var(--black-color) !important;
+}
+
+.bg-white-color {
+  background: var(--white-color) !important;
+}
+
+.bg-primary-color {
+  background: var(--primary-color) !important;
+}
+
+.bg-primary-dark-color {
+  background: var(--primary-dark-color) !important;
+}
+
+.bg-secondary-color {
+  background: var(--secondary-color) !important;
+}
+
+.bg-tertiary-color {
+  background: var(--tertiary-color) !important;
+}
+
+.bg-cta-color {
+  background: var(--cta-color) !important;
+}
+
+.bg-negative-color {
+  background: var(--negative-color) !important;
+}
+
+.black-text-color {
+  color: var(--black-text-color) !important;
+}
+
+.white-text-color {
+  color: var(--white-text-color) !important;
+}
+
+.cta-text-color {
+  color: var(--cta-color) !important;
+}
+
+.grey-text-color {
+  color: var(--grey-color) !important;
+}
+
+/* Header */
+
+.logo-liceo {
+  width: 40px;
+  transform: none;
+  transition: 0.3s;
+}
+
+.logo-liceo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.option:hover {
+  transform: translateY(-2px);
+}
+
+/* Fonts */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Francois One", sans-serif;
+}
+
+p,
+span,
+a {
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (max-width: 544px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Miscellaneus */
+
+/* Footer at bottom of the page */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 80px; /* Set same as footer's height */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
